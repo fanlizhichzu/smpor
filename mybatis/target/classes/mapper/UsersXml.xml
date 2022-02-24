@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.smpor.mybatis.mapper.UsersDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.spring.smpor.mybatis.po.UsersEntity">
+        <id column="account_id" property="accountId" />
+        <result column="account" property="account" />
+        <result column="client_id" property="clientId" />
+        <result column="employee_code" property="employeeCode" />
+        <result column="last_name" property="lastName" />
+        <result column="namespace" property="namespace" />
+        <result column="nick_name_cn" property="nickNameCn" />
+        <result column="realm_id" property="realmId" />
+        <result column="realm_name" property="realmName" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="tenant_name" property="tenantName" />
+        <result column="tenant_user_id" property="tenantUserId" />
+        <result column="divisioncode" property="divisioncode" />
+        <result column="userorgname" property="userorgname" />
+        <result column="mobile" property="mobile" />
+        <result column="state" property="state" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="last_login_time" property="lastLoginTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        account, account_id, client_id, employee_code, last_name, namespace, nick_name_cn, realm_id, realm_name, tenant_id, tenant_name, tenant_user_id, divisioncode, userorgname, mobile, state, create_time, update_time, last_login_time
+    </sql>
+
+    <sql id="sql_where_like">
+        <where>
+            <if test="account !=null and account !=''">
+                and account = #{account,jdbcType=BIGINT}
+            </if>
+        </where>
+    </sql>
+
+    <select id="searchDataLike" resultMap="BaseResultMap" parameterType="com.spring.smpor.mybatis.po.UsersEntity">
+        select
+        <include refid="Base_Column_List" />
+        from public.users
+        <include refid="sql_where_like" />
+        <if test="orderSql !=null and orderSql !='' ">
+            order by ${orderSql}
+        </if>
+    </select>
+
+</mapper>
