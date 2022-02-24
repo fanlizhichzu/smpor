@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="8" />
+      <module name="demo" target="8" />
+      <module name="mybatis" target="8" />
+      <module name="saToken" target="8" />
+      <module name="security" target="8" />
+      <module name="smpor" target="8" />
+      <module name="start" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

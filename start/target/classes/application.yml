@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: StartAlication
+
+  # ??
+  profiles:
+    active: dev
+
+  servlet:
+    multipart:
+      enabled: true
+      # 单个文件大小，m默认1M
+      max-file-size: 10MB
+      # 总上传文件大小，默认10M
+      max-request-size: 30MB
+      # 文件多少时写入磁盘，默认为0，有文件就写入
+      # file-size-threshold: 10MB
+
+file-check:
+  enabled: true
