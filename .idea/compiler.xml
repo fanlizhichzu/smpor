@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="start" />
         <module name="security" />
         <module name="common" />
+        <module name="mybatis" />
+        <module name="start" />
         <module name="saToken" />
         <module name="demo" />
-        <module name="mybatis" />
+        <module name="gisTutorial" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="gisTutorial" options="-parameters" />
       <module name="mybatis" options="-parameters" />
       <module name="saToken" options="-parameters" />
       <module name="security" options="-parameters" />

@@ -1,0 +1,63 @@
+
+E
+java:S3740R"/Provide the parametrized type for this generic.(ìØ°å
+F
+java:S3740Š"/Provide the parametrized type for this generic.(ó©¦ñ
+F
+java:S3740Š"/Provide the parametrized type for this generic.(ó©¦ñ
+E
+java:S3740’"/Provide the parametrized type for this generic.(Ó‚M
+K
+java:S3740­"/Provide the parametrized type for this generic.(ß¦¹Üúÿÿÿÿ
+K
+java:S3740­"/Provide the parametrized type for this generic.(ß¦¹Üúÿÿÿÿ
+7
+java:S1643"Use a StringBuilder instead.(¡ùä™úÿÿÿÿ
+8
+java:S1643"Use a StringBuilder instead.(¡ùä™úÿÿÿÿ
+8
+java:S1643Í"Use a StringBuilder instead.(•²î×ıÿÿÿÿ
+^
+java:S1226Û"GIntroduce a new variable instead of reusing the parameter "remotePath".(Û¡®ª
+i
+java:S2259Û"RA "NullPointerException" could be thrown; "getOriginalFilename()" can return null.(Û¡®ª
+n
+java:S2095İ"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(¶ê»ÿÿÿÿÿ
+U
+java:S1854?"?Remove this useless assignment to local variable "geomTypeStr".(ª¨ è
+U
+java:S1854A"?Remove this useless assignment to local variable "geomTypeStr".(Ùã’Ï
+F
+java:S1481?"0Remove this unused "geomTypeStr" local variable.(ª¨ è
+T
+java:S1155I">Use isEmpty() to check whether the collection is empty or not.(õàË¯
+m
+java:S3776P"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(£ë­ıÿÿÿÿ
+^
+java:S2230P"CMake this method "public" or remove the "@Transactional" annotation(£ë­ıÿÿÿÿ
+q
+java:S3923~"[Remove this conditional structure or edit its code blocks so that they're not all the same.(ı°–ç
+y
+java:S1157~"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ı°–ç
+]
+java:S1858"B"getValue" returns a string, there's no need to call "toString()".(¡ùä™úÿÿÿÿ
+^
+java:S1858"B"getValue" returns a string, there's no need to call "toString()".(¡ùä™úÿÿÿÿ
+W	java:S125‰"<This block of commented-out lines of code should be removed.(«¿ßşÿÿÿÿ
+W	java:S125—"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+Y
+java:S1172¬"=Remove these unused method parameters "fromWkid", "errorMsg".(ïÚÃ†üÿÿÿÿ
+I
+java:S1135²"2Complete the task associated to this TODO comment.(…ïœ†
+I
+java:S1135´"2Complete the task associated to this TODO comment.(…ïœ†
+W	java:S125Ú"<This block of commented-out lines of code should be removed.(–ÇÅúÿÿÿÿÿ
+Q	java:S899ë";Do something with the "boolean" value returned by "delete".(—Š Ó
+e
+java:S4042ë"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(—Š Ó
+W	java:S125ì"<This block of commented-out lines of code should be removed.(™“áŒşÿÿÿÿ
+Q	java:S899ó";Do something with the "boolean" value returned by "delete".(—Š Ó
+e
+java:S4042ó"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(—Š Ó
+K
+java:S1874‹"/Remove this use of "isEmpty"; it is deprecated.(ıœô¨ùÿÿÿÿ

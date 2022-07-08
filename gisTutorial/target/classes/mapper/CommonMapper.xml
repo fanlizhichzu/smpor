@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.smpor.gistutorial.mapper.CommonDao">
+
+    <select id="getGeomType"
+            resultType="string">
+        select type
+        from geometry_columns
+        where f_table_schema = #{schema}
+          and f_table_name = #{table};
+    </select>
+    <select id="getGeomColumn"
+            resultType="string">
+        select f_geometry_column
+        from geometry_columns
+        where f_table_schema = #{schema}
+          and f_table_name = #{table};
+    </select>
+    <select id="getSrid"
+            resultType="int">
+        select srid
+        from geometry_columns
+        where f_table_schema = #{schema}
+          and f_table_name = #{table};
+    </select>
+    <select id="getTableMetadata" resultType="com.spring.smpor.gistutorial.entity.TableMetaData">
+        SELECT col_description(a.attrelid, a.attnum) as
+                                                        comment,
+               format_type(a.atttypid, a.atttypmod)  as type,
+               a.attname                             as name,
+               a.attnotnull                          as notnull
+        FROM pg_class as c,
+             pg_attribute as a
+        where c.relname = #{table}
+          and a.attrelid = c.oid
+          and a.attnum > 0
+    </select>
+    <select id="getPrimaryKey" resultType="java.lang.String">
+        select column_name
+        from information_schema.constraint_column_usage a
+                 join
+             information_schema.table_constraints b on
+                     a.constraint_name = b.constraint_name and a.table_schema =
+                                                               b.constraint_schema and a.table_name = b.table_name
+        where b.constraint_type = 'PRIMARY KEY'
+          and a.table_schema = #{schema}
+          and a.table_name = #{table};
+    </select>
+</mapper>

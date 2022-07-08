@@ -18,3 +18,11 @@ spring:
 
 file-check:
   enabled: true
+
+task:
+  pool:
+    corePoolSize: 20
+    maxPoolSize: 30
+    keepAliveTime: 60
+    queueCapacity: 1000
+    threadNamePrefix: "task-executor-"

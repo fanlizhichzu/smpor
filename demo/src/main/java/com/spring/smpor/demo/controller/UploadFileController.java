@@ -4,12 +4,14 @@ import com.spring.smpor.common.annotation.FileCheck;
 import com.spring.smpor.common.annotation.ResponseResult;
 import com.spring.smpor.common.entity.PageEntity;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import sun.security.provider.certpath.OCSPResponse;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +27,9 @@ import java.io.UnsupportedEncodingException;
 @ResponseResult
 @Slf4j
 public class UploadFileController {
+    @Resource
+    RedisTemplate<String,Object> redisTemplate;
+
     @PostMapping(value = "/upload")
     @FileCheck
     public String getTableList(@RequestParam("file") MultipartFile file) {
@@ -37,5 +42,12 @@ public class UploadFileController {
         request.setCharacterEncoding("UTF-8");
         Cookie[] cookies = request.getCookies();
         return ResponseEntity.status(HttpStatus.OK).body("{\"code\": 200, \"msg\": \"未授权!\"}");
+    }
+
+    @PostMapping(value = "/set")
+    public void stringIntoTest(){
+        String key = "fanlz";
+        String value = "GIS开发";
+        redisTemplate.opsForValue().set(key,value);
     }
 }

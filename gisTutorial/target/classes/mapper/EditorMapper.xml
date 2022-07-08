@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.smpor.gistutorial.mapper.EditorDao">
+    <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="${pk}">
+        <!--        <selectKey resultType="java.lang.Long"  order="AFTER" keyProperty="${pk}" >-->
+        <!--            SELECT currval('${seq}') AS id-->
+        <!--        </selectKey>-->
+        ${value}
+    </insert>
+    <select id="selectSeqName" resultType="java.lang.String" >
+        select pg_get_serial_sequence('${table}', '${pk}');
+    </select>
+</mapper>

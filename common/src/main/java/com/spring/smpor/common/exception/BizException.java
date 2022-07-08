@@ -13,7 +13,7 @@ public class BizException extends RuntimeException {
     /**
      * 错误码
      */
-    private Integer code;
+    private String code;
 
     /**
      * 错误信息
@@ -38,17 +38,17 @@ public class BizException extends RuntimeException {
 
     public BizException(String message) {
         super(message);
-        this.code = -1;
+        this.code = "B0001";
         this.message = message;
     }
 
-    public BizException(Integer code, String message) {
+    public BizException(String code, String message) {
         super(message);
         this.code = code;
         this.message = message;
     }
 
-    public BizException(Integer code, String message, Throwable cause) {
+    public BizException(String code, String message, Throwable cause) {
         super(message, cause);
         this.code = code;
         this.message = message;

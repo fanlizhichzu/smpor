@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class R implements Serializable {
     private static final long serialVersionUID = -8819983697240643575L;
     @ApiModelProperty(value = "返回码")
-    private Integer code;
+    private String code;
 
     @ApiModelProperty(value = "返回消息")
     private String message;
@@ -54,7 +54,7 @@ public class R implements Serializable {
     }
 
     // 返回失败
-    public static R fail(Integer code, String message) {
+    public static R fail(String code, String message) {
         R result = new R();
         result.setCode(code);
         result.setMessage(message);

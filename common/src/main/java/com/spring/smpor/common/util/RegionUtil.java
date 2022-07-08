@@ -1,14 +1,17 @@
 package com.spring.smpor.common.util;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @Description:
  * @Auther: fanlz
  * @Date: 2021/12/3 14:35
  */
+@Slf4j
 public class RegionUtil {
     public static void main(String[] args) {
-        String regionCode = "330000000000";
-        System.out.println(RegionUtil.getRegionCode(regionCode));
+        String regionCode = "330903200000";
+        log.info("RegionCode is {}", RegionUtil.getRegionCode(regionCode));
     }
 
     public static String getRegionCode(String regionCode) {

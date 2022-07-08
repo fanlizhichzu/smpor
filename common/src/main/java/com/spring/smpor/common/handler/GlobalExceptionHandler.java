@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -36,16 +37,16 @@ public class GlobalExceptionHandler {
     }
 
     // 参数校验异常
-    @ExceptionHandler(BindException.class)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     public ErrorResult handleBindExcpetion(BindException e, HttpServletRequest request) {
         log.error("发生参数校验异常！原因是：",e);
-        return ErrorResult.fail(ResultCode.PARAM_IS_INVALID, e, e.getAllErrors().get(0).getDefaultMessage());
+        return ErrorResult.fail(ResultCode.USER_PARAM_IS_INVALID, e, e.getAllErrors().get(0).getDefaultMessage());
     }
 
-    // 参数校验异常
+    // 文件格式校验异常
     @ExceptionHandler(FileUploadException.class)
     public ErrorResult handleBindExcpetion(FileUploadException e, HttpServletRequest request) {
         log.error("文件格式不正确！原因是：",e);
-        return ErrorResult.fail(ResultCode.PARAM_IS_INVALID, e, e.getMessage());
+        return ErrorResult.fail(ResultCode.USER_PARAM_IS_INVALID, e, e.getMessage());
     }
 }

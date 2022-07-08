@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: zjgis.123
+    password: smpor
     driver-class-name: org.postgresql.Driver
     hikari:
       pool-name: Retail_HikariCP
@@ -12,12 +12,44 @@ spring:
       auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
       max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
       connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: foobared
+    jedis:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        # 连接池中的最小空闲连接
+        max-idle: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 100000
+  flyway:
+    # 是否启用flyway
+    enabled: true
+    # 禁用数据库清理
+    clean-disabled: true
+    # 编码格式，默认UTF-8
+    encoding: UTF-8
+    # 迁移sql脚本文件存放路径，默认db
+    locations: classpath:db/migration
+    #  flyway 会在库中创建此名称元数据表，用于记录所有版本演化和状态,同一个库不同项目可能冲突，每个项目一张表来记录
+    # TODO 值的后缀指定为当前项目名称
+    table: flyway_schema_history
+    # 基线版本默认开始序号 默认为 1
+    baseline-version: 1
+    # 针对非空数据库是否默认调用基线版本,为空的话默认会调用基线版本
+    baseline-on-migrate: true
+    # 定义 afterMigrateError.sql 要清理的元数据表表名
+    placeholders:
+      flyway-table: ${spring.flyway.table}
 mybatis-plus:
-  mapper-locations: classpath:mapper/**/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
   configuration:
     jdbc-type-for-null: null
     call-setters-on-nulls: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     banner: false
 server:

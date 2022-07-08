@@ -1,0 +1,35 @@
+
+`	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(˜äÑ¤ýÿÿÿÿ
+`	java:S112}"FDefine and throw a dedicated exception instead of using a generic one.(èÝÎÑþÿÿÿÿ
+\	java:S112Ç"FDefine and throw a dedicated exception instead of using a generic one.(ÆÖíâ
+K
+java:S3740É"/Provide the parametrized type for this generic.(›Üý„ùÿÿÿÿ
+a
+java:S1192C"FDefine a constant instead of duplicating this literal "EPSG:" 3 times.(…»÷«ùÿÿÿÿ
+D
+java:S1066="/Merge this if statement with the enclosing one.(‰ˆÆ*
+f	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ìç¯
+€
+java:S1488ý"iImmediately return this expression instead of assigning it to the temporary variable "simpleFeatureType".(ûŸŠÝ
+@
+java:S5411p"*Use the primitive boolean expression here.(ì°Ì•
+P
+java:S1118 ":Add a private constructor to hide the implicit public one.(äÈÇ™
+m
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(˜äÑ¤ýÿÿÿÿ
+<
+java:S11817"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ
+C	java:S1087")Either remove or fill this block of code.(©¢Èäøÿÿÿÿ
+V	java:S125C"<This block of commented-out lines of code should be removed.(…»÷«ùÿÿÿÿ
+;
+java:S1481h"&Remove this unused "g" local variable.(­ì»[
+P
+java:S2864Œ"4Iterate over the "entrySet" instead of the "keySet".(ÚÝ–øÿÿÿÿ
+D	java:S108")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+n
+java:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(«ÌëÁþÿÿÿÿ
+B
+java:S1481Õ"&Remove this unused "a" local variable.(áòÔ¬úÿÿÿÿ
+?	java:S108Þ")Either remove or fill this block of code.(Úîø›
+J
+java:S1068!"/Remove this unused "customWkids" private field.(Îå·³üÿÿÿÿ

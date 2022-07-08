@@ -9,17 +9,17 @@ import com.spring.smpor.common.result.ResultCode;
  */
 public class ErrorResult {
 
-    private Integer code;
+    private String code;
 
     private String message;
 
     private String exception;
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -53,7 +53,7 @@ public class ErrorResult {
         return errorResult;
     }
 
-    public static ErrorResult fail(Integer code, String message) {
+    public static ErrorResult fail(String code, String message) {
         ErrorResult errorResult = new ErrorResult();
         errorResult.setCode(code);
         errorResult.setMessage(message);

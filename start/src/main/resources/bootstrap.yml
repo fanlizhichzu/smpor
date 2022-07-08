@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: smpor
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: ${spring.profiles.active}
+        prefix: ${spring.application.name}
+        namespace: smpor
+server:
+  port: 18089

@@ -1,0 +1,19 @@
+
+k	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»²Èïüÿÿÿÿ
+l	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÉ¾Çúÿÿÿÿ
+g	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÚçº
+w
+java:S1488Ö"`Immediately return this expression instead of assigning it to the temporary variable "LOCATION".(ıÚçº
+g	java:S101 "MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Öøí²ùÿÿÿÿ
+k
+java:S2095"PUse try-with-resources or close this "DefaultTransaction" in a "finally" clause.(ÈÅİÌşÿÿÿÿ
+E
+java:S1481*"0Remove this unused "pointByType" local variable.(Õì¯
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(ç·´‡øÿÿÿÿ
+M	java:S106B"9Replace this use of System.out or System.err by a logger.(ğáÊ^
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(İšµóúÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(¶ÆßŠ
+T	java:S106£"9Replace this use of System.out or System.err by a logger.(­ÿÉÂıÿÿÿÿ
+^
+java:S3252¶"GUse static access with "javax.swing.JFileChooser" for "APPROVE_OPTION".(“ŸŒ
+O	java:S106½"9Replace this use of System.out or System.err by a logger.(¶Ÿú÷
